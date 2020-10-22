@@ -109,7 +109,7 @@
         }
 
         #divisor {
-            grid-row: 5/6;
+            grid-row: google;
             grid-column: 1/5;
             margin: auto;
             letter-spacing: 2px;
@@ -138,6 +138,50 @@
             font-size: 14px;
             transition-duration: .5s;
         }
+
+        #demoBox {
+            grid-row: demo;
+            background-color:  #7e7e7ea8;
+            color: white;
+            grid-column: 1/5;
+            font-weight: bold;
+            width: 15%;
+            margin-top: 0;
+        }
+
+        #demoBox:hover {
+            grid-row: demo;
+            background-color: #7e7e7ed2;
+            grid-column: 1/5;
+            width: 40%;
+            transition-duration: .5s;
+            cursor: pointer;
+        }
+
+        #versionText {
+            color: transparent;
+            font-size: 0;
+            margin: 0;
+        }
+        #demoBox:hover #versionText {
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin: auto;
+            margin-left: 5px;
+        }
+
+        #demoBox:hover #demoText{
+            margin-right: 0px;
+        }
+
+        #demoBox:hover #versionText {
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin: auto;
+            margin-left: 5px;
+        }
     </style>
 
     <div id='signInForm'>
@@ -162,6 +206,10 @@
         <div id="signInWithGoogleBox" class="button">
             <img id="googleIcon" src="images/googleIcon.svg">
             <div id="signInWithGoogleButtonText">Sign in with Google</div>
+        </div>
+        <div id="demoBox" class="button">
+            <div id="demoText">Demo</div>
+            <div id="versionText">Version</div>
         </div>
     </div>
 </body>
