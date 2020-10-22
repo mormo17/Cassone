@@ -15,8 +15,8 @@
             height: 500px;
             display: grid;
             grid-template-rows: 
-                [company-name] 1fr
-                [welcome] 1fr
+                [cassone] 1fr
+                [greeting] 1fr
                 [email-password] 100px
                 [buttons] 1fr
                 [google] 1fr
@@ -182,9 +182,26 @@
             margin: auto;
             margin-left: 5px;
         }
+        #cassone{
+            grid-row: cassone;
+            grid-column: 1/5;
+            height: 100px;
+        }
+        #greeting{
+            grid-row: greeting;
+            grid-column: 1/5;
+            font-size: 35px;
+            font-weight: bold;
+        }
     </style>
 
     <div id='signInForm'>
+        <div id='cassone'>
+            <img id="cassone" src="images/cassone.png">
+        </div>
+        <div id="greeting">
+            <div id="greetingText">Open Your Cassone!</div>
+        </div>
         <div id='emailPasswordContainer'>
             <div id='emailBox'>
                 <img id="emailIcon" src="images/envelope.svg">
@@ -200,7 +217,7 @@
         </div>
         
         <div id="signInBox" class="button">
-            <div button="signInButtonText">Sign In</div>
+            <div id="signInButtonText">Sign In</div>
         </div>
         <div id="divisor">- OR -</div>
         <div id="signInWithGoogleBox" class="button">
