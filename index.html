@@ -60,6 +60,52 @@
             height: 26px;
             margin: auto;
         }
+
+        #signInButton {
+            grid-row: buttons;
+            grid-column: 3/5;
+            margin-right: 60px;
+            width: 75%;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(42, 36, 95);
+            border: none;
+        }
+
+        #signInButton:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            transition-duration: .1s;
+        }
+
+        #signUpBox {
+            grid-row: buttons;
+            grid-column: 1/3;
+            margin-left: 60px;
+            width: 75%;
+            font-weight: bold;
+            color: white;
+            background-color: #7e7e7ea8;
+            border: none;
+            text-align: center;
+        }
+        #signUpBox:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            background-color: #7e7e7ed2;
+            transition-duration: .1s;
+        }
+
+        .button {
+            margin: auto;
+            height: 35px;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        .button div {
+            margin: auto;
+        }
         
     </style>
 
@@ -73,6 +119,13 @@
                 <img id="passwordIcon" src="images/lock.svg">
                 <textarea id="passwordInputArea" name="password" scroll="none" placeholder="Password"></textarea>
             </div>
+        </div>
+        <div id="signUpBox" class="button">
+            <div id="signUpButtonText">Sign Up</div>
+        </div>
+        
+        <div id="signInButton" class="button">
+            <div button="signInButtonText">Sign In</div>
         </div>
     </div>
 </body>
