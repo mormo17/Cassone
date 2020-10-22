@@ -61,7 +61,7 @@
             margin: auto;
         }
 
-        #signInButton {
+        #signInBox {
             grid-row: buttons;
             grid-column: 3/5;
             margin-right: 60px;
@@ -72,7 +72,7 @@
             border: none;
         }
 
-        #signInButton:hover {
+        #signInBox:hover {
             transform: scale(1.05);
             cursor: pointer;
             transition-duration: .1s;
@@ -89,6 +89,7 @@
             border: none;
             text-align: center;
         }
+
         #signUpBox:hover {
             transform: scale(1.05);
             cursor: pointer;
@@ -107,13 +108,36 @@
             margin: auto;
         }
 
-        #selectionDivider {
+        #divisor {
             grid-row: 5/6;
             grid-column: 1/5;
             margin: auto;
             letter-spacing: 2px;
         }
-        
+
+        #signInWithGoogleBox {
+            width: 15%;
+            grid-row: 6/7;
+            grid-column: 1/5;
+            background-color: red;
+        }
+
+        #signInWithGoogleBox:hover {
+            width: 40%;
+            transition-duration: .5s;
+        }
+ 
+        #signInWithGoogleButtonText {
+            color: transparent;
+            font-weight: bold;
+            font-size:   2px;
+        }
+ 
+        #signInWithGoogleBox:hover #signInWithGoogleButtonText{
+            color: white;
+            font-size: 14px;
+            transition-duration: .5s;
+        }
     </style>
 
     <div id='signInForm'>
@@ -131,9 +155,13 @@
             <div id="signUpButtonText">Sign Up</div>
         </div>
         
-        <div id="signInButton" class="button">
+        <div id="signInBox" class="button">
             <div button="signInButtonText">Sign In</div>
         </div>
-        <div id="selectionDivider">- OR -</div>
+        <div id="divisor">- OR -</div>
+        <div id="signInWithGoogleBox" class="button">
+            <img id="googleIcon" src="images/googleIcon.svg">
+            <div id="signInWithGoogleButtonText">Sign in with Google</div>
+        </div>
     </div>
 </body>
