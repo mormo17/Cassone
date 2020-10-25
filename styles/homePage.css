@@ -28,39 +28,144 @@
 }
 
 .leftNavigation {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    position: fixed;
-    background-color: rgb(56, 54, 54);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .leftNavigation a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .leftNavigation a:hover {
-    color: #f1f1f1;
-  }
-  
-  .leftNavigation .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .leftNavigation {padding-top: 15px;}
-    .leftNavigation a {font-size: 18px;}
-  }
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: rgb(56, 54, 54);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.leftNavigation a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.leftNavigation a:hover {
+  color: #f1f1f1;
+}
+
+.leftNavigation .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .leftNavigation {padding-top: 15px;}
+  .leftNavigation a {font-size: 18px;}
+}
+
+
+#todoes{
+  /* background-color: rgb(148, 75, 75); */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 800px;
+  height: 800px;
+}
+
+#titleBox{
+  /* background-color: rgb(129, 151, 49); */
+  height: 8%;
+  position: relative;
+}
+
+.titleBox{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid gray;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#homeTitle{
+  font-size: 22px;
+  font-weight: bold;
+  /* top: 50%; */
+  transform: translate(0, 0%);
+  margin: auto 10px auto;
+}
+
+.emptyCheckBox{
+  width: 15px;
+  margin: auto 10px auto;
+  float: left;  
+}
+
+
+.editIcon, .deleteIcon{
+  width: 15px;
+  float: left;  
+
+  margin: auto 10px auto;
+}
+
+.tasks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleTask, .titleBox{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid gray;
+  margin-bottom: 8px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.dueDate{
+  margin-right: 64px;
+  font-size: 18px;
+  font-weight: bold;
+  /* top: 50%; */
+  transform: translate(0, 35%);
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa{
+  width: 15px;
+  cursor: pointer;
+  margin-left: 16px;
+  /* display: none; */
+}
+
+.fa:hover{
+  color: rgb(202, 200, 214);
+  /* width: 24px; */
+  transform: scale(1.2); 
+}
+
+.editDelete{
+  visibility: hidden;
+}
+
+.singleTask:hover .editDelete{
+  visibility: visible;
+}
+
+#checkBox:checked + label {
+  color:gray;
+  text-decoration: line-through;
+}

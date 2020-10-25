@@ -1,30 +1,89 @@
 <head>
-    <title>Demo</title>
-    <link rel="stylesheet" href="styles/firstPage.css" />
+  <title>Demo</title>
+  <link rel="stylesheet" href="styles/homePage.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
-   <div id='header'>
-        <div id='burgerMenuIcon' class="burgerMenuIcon" onclick="openNav(this)">
-            <div class="burgerMenuFirstLine"></div>
-            <div class="burgerMenuSecondLine"></div>
-            <div class="burgerMenuThirdLine"></div>
-        </div>
-   </div>
+  <div id='header'>
+    <div id='burgerMenuIcon' class="burgerMenuIcon" onclick="openNav(this)">
+      <div class="burgerMenuFirstLine"></div>
+      <div class="burgerMenuSecondLine"></div>
+      <div class="burgerMenuThirdLine"></div>
+    </div>
+  </div>
 
-   <div id="leftNavigation" class="leftNavigation">
+  <div id="leftNavigation" class="leftNavigation">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="#">RAGACA 1</a>
     <a href="#">RAGACA 2</a>
+    <a href="#">RAGACA 3</a>
+  </div>
+
+  <div id='todoes' class='todoes'>
+    <div id='titleBox' class="titleBox">
+      <div id="homeTitle" class="homeTitle">Home</div>
+      <div id="dueDate" class="dueDate">Due Date</div>
+    </div>
+    <div class="tasks" id='tasks'>
+      <div id="firstSingleTask" class='singleTask'>
+        <div class="checkBoxContainer">
+          <input type="checkbox" id="checkBox" name="checkBox" value="checkBox">
+          <label for="checkBox"> Task 1 </label>
+        </div>
+        
+        <div class="icons-container">
+          <div class="taskDueDate">TODAY</div>
+          <div class="editDelete">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div id="secondSingleTask" class='singleTask'>
+        <div class="checkBoxContainer">
+          <input type="checkbox" id="checkBox" name="checkBox" value="checkBox">
+          <label for="taskTitle "> Task 2 </label>
+        </div>
+        
+        <div class="icons-container">
+          <div class="taskDueDate" >31/01/2121</div>
+          <div class="editDelete">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <div id="thirdSingleTask" class='singleTask'>
+        <div class="checkBoxContainer">
+          <input type="checkbox" id="checkBox" name="checkBox" value="checkBox">
+          <label for="taskTitle "> Task 3 </label>
+        </div>
+        
+        <div class="icons-container">
+          <div class="taskDueDate">Tomorrow</div>
+          <div class="editDelete">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>    
   </div>
 </body>
 
 <script>
-    function openNav(x) {      
-      document.getElementById("leftNavigation").style.width = "250px";
-    }
+  function openNav(x) {      
+    document.getElementById("leftNavigation").style.width = "250px";
+  }
 
-    function closeNav(){
-      document.getElementById("leftNavigation").style.width = "0";
-    }
+  function closeNav(){
+    document.getElementById("leftNavigation").style.width = "0";
+  }
 
+  function editTask(){
+    alert("blablabla")
+  }
 </script>
