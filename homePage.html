@@ -1,7 +1,11 @@
 <head>
   <title>Demo</title>
   <link rel="stylesheet" href="styles/homePage.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/leftNavigation .css" />
+  <link rel="stylesheet" href="styles/newTaskModal.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 </head>
 <body>
   <div id='header'>
@@ -58,8 +62,18 @@
         <div class="icons-container">
           <div class="taskDueDate">TODAY</div>
           <div class="editDelete">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <i class="fa fa-trash" aria-hidden="true"></i>
+            <div class="tooltip">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <span class="tooltiptext">Edit</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <span class="tooltiptext">Change Priority</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span class="tooltiptext">Delete</span>
+            </div>
           </div>
         </div>
       </div>
@@ -73,8 +87,18 @@
         <div class="icons-container">
           <div class="taskDueDate" >31/01/2121</div>
           <div class="editDelete">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <i class="fa fa-trash" aria-hidden="true"></i>
+            <div class="tooltip">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <span class="tooltiptext">Edit</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <span class="tooltiptext">Change Priority</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span class="tooltiptext">Delete</span>
+            </div>
           </div>
         </div>
       </div>
@@ -88,20 +112,66 @@
         <div class="icons-container">
           <div class="taskDueDate">Tomorrow</div>
           <div class="editDelete">
-            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            <i class="fa fa-trash" aria-hidden="true"></i>
+            <div class="tooltip">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+              <span class="tooltiptext">Edit</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-flag" aria-hidden="true"></i>
+              <span class="tooltiptext">Change Priority</span>
+            </div>
+            <div class="tooltip">
+              <i class="fa fa-trash" aria-hidden="true"></i>
+              <span class="tooltiptext">Delete</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div id="fourthSingleTask" class='singleTask'>
         <div class="checkBoxContainer">
-          <i class="fa fa-plus" aria-hidden="true"></i>
+          <i class="fa fa-plus" id="myBtn" aria-hidden="true"></i>
           <label for="taskTitle"> Add Task </label>
         </div>
       </div>
     </div>    
   </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-header">
+        <p><b>Add New Task</b></p>
+      </div>
+      <div class="modal-body">
+        <div class="modal-body-left-column">
+          <p>Task Name</p>
+          <input type="text" class="task-name" id="taskTitle" maxlength="30" required="">
+          <p>Priority</p>
+        
+          <select class="custom-select" id="taskPriority" required="">
+            <option value="low" selected="">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <p>Due Date</p>
+          <input type="date" id="start" name="trip-start"
+          value="2020--22"
+          min="2020-01-01" max="2022-01-01">
+        </div>
+        <div class="modal-body-right-column">
+          <p>Description</p>
+          <textarea class="task-description-textarea" ></textarea>
+          <div>Task Description is required</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="add-task-btn"> Add Task </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 
 <script>
@@ -125,4 +195,22 @@
   function editTask(){
     alert("blablabla")
   }
+
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  } 
 </script>
