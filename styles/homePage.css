@@ -5,35 +5,28 @@
     left: 0;
     margin: auto;
     width: 100%;
-    height: 4%;
+    height: 36px;
     background-color: rgba(202, 199, 199, 0.685);
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14),
     0px 1px 14px 0px rgba(0, 0, 0, 0.12); 
 }
 
-
-.burgerMenuIcon {
+.burgerMenuIcon{
     display: inline-block;
     cursor: pointer;
+    margin-top: 4px;
     left: 20px;
+    margin-left: 15px;
 }
   
-.burgerMenuFirstLine, .burgerMenuSecondLine, .burgerMenuThirdLine {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
 .leftNavigation {
-  top: 0;
+  top: 36px;
   left: 0;
   height: 100%;
   width: 0;
   position: fixed;
-  background-color: rgb(56, 54, 54);
+  background-color: #fafafa;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -45,19 +38,19 @@
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
 }
 
 .leftNavigation a:hover {
-  color: #f1f1f1;
+  color: #27688d;
 }
 
-.leftNavigation .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.closebtn{
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 4px;
+  left: 20px;
+  margin-left: -15px;
+  visibility: hidden;
 }
 
 @media screen and (max-height: 450px) {
@@ -69,13 +62,14 @@
 #todoes{
   /* background-color: rgb(148, 75, 75); */
   position: absolute;
-  top: 0;
+  top: 72px;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 800px;
-  height: 800px;
+  width: 1024px;
+  height: auto;
+  transition: 0.5s;
 }
 
 #titleBox{
@@ -101,20 +95,6 @@
   margin: auto 10px auto;
 }
 
-.emptyCheckBox{
-  width: 15px;
-  margin: auto 10px auto;
-  float: left;  
-}
-
-
-.editIcon, .deleteIcon{
-  width: 15px;
-  float: left;  
-
-  margin: auto 10px auto;
-}
-
 .tasks{
   display: flex;
   flex-direction: column;
@@ -130,6 +110,13 @@
   width: 100%;
   justify-content: space-between;
 }
+
+.menu-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 
 .dueDate{
   margin-right: 64px;
@@ -147,13 +134,18 @@
 .fa{
   width: 15px;
   cursor: pointer;
+}
+
+.fa-pencil-square-o, .fa-trash, .menu-single-item{
   margin-left: 16px;
-  /* display: none; */
+}
+
+.fa-plus{
+  margin-left: 4px;
 }
 
 .fa:hover{
   color: rgb(202, 200, 214);
-  /* width: 24px; */
   transform: scale(1.2); 
 }
 
@@ -168,4 +160,8 @@
 #checkBox:checked + label {
   color:gray;
   text-decoration: line-through;
+}
+
+#checkBox:checked + .ragaca{
+  visibility: visible;
 }
