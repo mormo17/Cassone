@@ -22,6 +22,18 @@
     color: #27688d;
   }
   
+  .menu-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .fa-pencil-square-o,
+  .fa-flag,
+  .fa-trash,
+  .menu-single-item{
+    margin-left: 8px;
+  }
   
   
   @media screen and (max-height: 450px) {

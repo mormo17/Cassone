@@ -50,12 +50,6 @@
   justify-content: space-between;
 }
 
-.menu-items{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .dueDate{
   margin-right: 80px;
   font-size: 18px;
@@ -74,13 +68,6 @@
   cursor: pointer;
 }
 
-.fa-pencil-square-o,
-.fa-flag,
-.fa-trash,
-.menu-single-item{
-  margin-left: 8px;
-}
-
 .fa-flag{
   color: orange;
 }
@@ -90,8 +77,12 @@
 }
 
 .fa:hover{
-  color: rgb(202, 200, 214);
   transform: scale(1.2); 
+}
+
+.fa-pencil-square-o:hover,
+.fa-trash:hover{
+  color: rgb(202, 200, 214);
 }
 
 .editDelete{
