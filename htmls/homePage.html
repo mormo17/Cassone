@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="../styles/newTaskModal.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   <script src="../jss/leftNavigation.js"></script>
-  <script src="../jss/addNewTaskModal.js"></script>
 </head>
 <body>
   <div id='header'>
@@ -68,7 +67,13 @@
               <span class="tooltiptext">Edit</span>
             </div>
             <div class="tooltip">
-              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-flag" aria-hidden="true" onclick="showPriorities(this)">
+                <div id="myDropdown" class="dropdown-content">
+                  <a class="dropdown-option" onclick="changePriority(this, 'blue')" href="#Low">Low</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'orange')" href="#Medium">Medium</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'red')" href="#High">High</a>
+                </div>
+              </i>
               <span class="tooltiptext">Change Priority</span>
             </div>
             <div class="tooltip">
@@ -93,7 +98,13 @@
               <span class="tooltiptext">Edit</span>
             </div>
             <div class="tooltip">
-              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-flag" aria-hidden="true" onclick="showPriorities(this)">
+                <div id="myDropdown" class="dropdown-content">
+                  <a class="dropdown-option" onclick="changePriority(this, 'blue')" href="#Low">Low</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'orange')" href="#Medium">Medium</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'red')" href="#High">High</a>
+                </div>
+              </i>
               <span class="tooltiptext">Change Priority</span>
             </div>
             <div class="tooltip">
@@ -118,7 +129,13 @@
               <span class="tooltiptext">Edit</span>
             </div>
             <div class="tooltip">
-              <i class="fa fa-flag" aria-hidden="true"></i>
+              <i class="fa fa-flag" aria-hidden="true" onclick="showPriorities(this)">
+                <div id="myDropdown" class="dropdown-content">
+                  <a class="dropdown-option" onclick="changePriority(this, 'blue')" href="#Low">Low</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'orange')" href="#Medium">Medium</a>
+                  <a class="dropdown-option" onclick="changePriority(this, 'red')" href="#High">High</a>
+                </div>
+              </i>
               <span class="tooltiptext">Change Priority</span>
             </div>
             <div class="tooltip">
@@ -140,7 +157,7 @@
 
   <!-- The Modal -->
   <div id="myModal" class="modal">
-    <div class="modal-content">
+    <form class="modal-content">
       <span class="close">&times;</span>
       <div class="modal-header">
         <p><b>Add New Task</b></p>
@@ -148,29 +165,32 @@
       <div class="modal-body">
         <div class="modal-body-left-column">
           <p>Task Name</p>
-          <input type="text" class="task-name" id="taskTitle" maxlength="30" required="">
+          <input type="text" class="task-name modal-item" 
+                 id="taskTitle" maxlength="30"
+                 placeholder="Enter Task Name"
+                 required>
           <p>Priority</p>
         
-          <select class="custom-select" id="taskPriority" required="">
+          <select class="custom-select modal-item" id="taskPriority" required>
             <option value="low" selected="">Low</option>
             <option value="medium">Medium</option>
             <option value="high">High</option>
           </select>
           <p>Due Date</p>
-          <input type="date" id="start" name="trip-start"
+          <input type="date" class="modal-item" id="start" name="trip-start"
           value="2020--22"
-          min="2020-01-01" max="2022-01-01">
+          min="2020-01-01" max="2022-01-01" required>
         </div>
-        <div class="modal-body-right-column">
+        <div class="modal-body-right-column modal-item">
           <p>Description</p>
-          <textarea class="task-description-textarea" ></textarea>
-          <div>Task Description is required</div>
+          <textarea class="task-description-textarea modal-item" placeholder="Enter Task Description"></textarea>
+          <!-- <div>Task Description is required</div> -->
         </div>
       </div>
       <div class="modal-footer">
         <button type="submit" class="add-task-btn"> Add Task </button>
       </div>
-    </div>
+    </form>
   </div>
 
 </body>
@@ -180,6 +200,13 @@
     alert("blablabla")
   }
 
+  function showPriorities(x) {
+    x.firstElementChild.classList.toggle("show");
+  }
+
+  function changePriority(x, color){
+    x.parentElement.parentElement.style.color = color
+  }
 
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("myBtn");

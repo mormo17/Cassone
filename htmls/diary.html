@@ -1,7 +1,7 @@
 <head>
     <title>Dear..</title>
     <link rel="stylesheet" href="../styles/diary.css" />
-    <!-- <link rel="stylesheet" href="../styles/homePage.css" /> -->
+    <link rel="stylesheet" href="../styles/homePage.css" />
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/leftNavigation .css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -56,4 +56,17 @@
         <div class="holes hole-middle"></div>
         <div class="holes hole-bottom"></div>
     </div>
+    <script>
+      let url = window.location.search;
+      let color = url.substr(url.indexOf('=')+1);
+      color = url.includes('true')?'#'+color.substr(0, color.indexOf(',')):color;
+      console.log(color);
+      document.body.style.background =  color;
+      document.getElementsByClassName('holes')[0].style.background = color;
+      document.getElementsByClassName('holes')[1].style.background = color;
+      document.getElementsByClassName('holes')[2].style.background = color;
+      
+      // console.log(url);
+      // console.log(color);
+    </script>
 </body>
