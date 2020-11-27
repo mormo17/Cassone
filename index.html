@@ -1,0 +1,59 @@
+<head>
+    <title>hello</title>
+
+</head>
+<body>
+    <style>
+        #signInForm {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 600px;
+            height: 500px;
+            display: grid;
+        }
+
+        #emailPasswordContainer {
+            display: grid;
+            /* grid-template-rows: 1fr 1fr; */
+            grid-column: 1/5;
+        }
+        
+        #emailBox, #passwordBox {
+            width: 80%;
+            height: 50%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 50px auto;
+            border: 2px solid rgba(255, 255, 255, 0.685);;
+            padding: 10px;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.685);
+        }
+
+        #emailInputArea, #passwordInputArea{
+            border: none;
+            resize: none;
+            /* margin: auto; */
+            margin-left: 6px;
+            text-align: left;
+            background: transparent;
+        }
+
+        
+    </style>
+
+    <div id='signInForm'>
+        <div id='emailPasswordContainer'>
+            <div id='emailBox'>
+                <textarea id="emailInputArea" name="email" scroll="none" placeholder="Email Address"></textarea>
+            </div>
+            <div id='passwordBox'>
+                <textarea id="passwordInputArea" name="password" scroll="none" placeholder="Password"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
