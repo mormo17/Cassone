@@ -1,6 +1,7 @@
 <head>
     <title>hello</title>
     <link rel="stylesheet" href="../styles/initialPage.css" />
+    <script src="../jss/loadPages/loadDemo.js"></script>
 </head>
 <body>
     <div id='signInForm'>
@@ -12,11 +13,11 @@
         </div>
         <div id='emailPasswordContainer'>
             <div id='emailBox'>
-                <img id="emailIcon" src="images/envelope.svg">
+                <img id="emailIcon" src="../images/envelope.svg">
                 <textarea id="emailInputArea" name="email" scroll="none" placeholder="Email Address"></textarea>
             </div>
             <div id='passwordBox'>
-                <img id="passwordIcon" src="images/lock.svg">
+                <img id="passwordIcon" src="../images/lock.svg">
                 <textarea id="passwordInputArea" name="password" scroll="none" placeholder="Password"></textarea>
             </div>
         </div>
@@ -29,10 +30,10 @@
         </div>
         <div id="divisor">- OR -</div>
         <div id="signInWithGoogleBox" class="button">
-            <img id="googleIcon" src="images/googleIcon.svg">
+            <img id="googleIcon" src="../images/googleIcon.svg">
             <div id="signInWithGoogleButtonText">Sign in with Google</div>
         </div>
-        <div id="demoBox" class="button">
+        <div id="demoBox" class="button" onclick="loadDemo()">
             <div id="demoText">Demo</div>
             <div id="versionText">Version</div>
         </div>

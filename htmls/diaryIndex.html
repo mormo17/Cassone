@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="../styles/diaryIndex.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
     <script src="../jss/leftNavigation.js"></script>
-    <script src="../jss/loadNote.js"></script>
+    <script src="../jss/loadPages/loadNote.js"></script>
+    <script src="../jss/loadPages/loadHomePage.js"></script>
 </head>
 <body>
     <div id='header'>
@@ -16,7 +17,7 @@
     <div id="leftNavigation" class="leftNavigation">
         <div class="menu-items">
           <i class="fa fa-calendar-o menu-single-item" aria-hidden="true"></i>
-          <a href="#">Today</a>
+          <a href="#" onclick="loadHomePage()">Today</a>
         </div>
     
         <div class="menu-items">
@@ -96,6 +97,4 @@
           </a>
         </li>
     </ul>
-      
-    
 </body>
