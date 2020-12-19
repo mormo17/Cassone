@@ -1,41 +1,62 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>hello</title>
-    <link rel="stylesheet" href="../styles/initialPage.css" />
-    <script src="../jss/loadPages/loadDemo.js"></script>
+    <title> Cassone </title>
+    <link rel="icon" href="../images/main.png">
+    <link rel="stylesheet" href="../styles/leftNavigation.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="../jss/leftNavigation.js"></script>
+    <script src="../jss/loadPages/loadDiaryIndex.js"></script>
+    <script src="../jss/config.js"></script>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <div id='signInForm'>
-        <div id='cassone'>
-            <img id="cassone" src="../images/cassone.png">
+    <div id='header'>
+        <i id='burgerMenuIcon' class="fa fa-bars fa-2x burgerMenuIcon" aria-hidden="true" onclick="openNav(this)"></i>
+        <i id='closebtn' class="fa fa-times fa-2x closebtn" aria-hidden="true" onclick="closeNav()"></i>
+    </div>   
+
+    <div id="leftNavigation" class="leftNavigation">
+        <div class="menu-items">
+          <i class="fa fa-calendar-o menu-single-item" aria-hidden="true"></i>
+          <a href="#">Today</a>
         </div>
-        <div id="greeting">
-            <div id="greetingText">Open Your Cassone!</div>
+    
+        <div class="menu-items">
+          <i class="fa fa-sticky-note-o menu-single-item" aria-hidden="true"></i>
+          <a href="#">Diary</a>
         </div>
-        <div id='emailPasswordContainer'>
-            <div id='emailBox'>
-                <img id="emailIcon" src="../images/envelope.svg">
-                <textarea id="emailInputArea" name="email" scroll="none" placeholder="Email Address"></textarea>
-            </div>
-            <div id='passwordBox'>
-                <img id="passwordIcon" src="../images/lock.svg">
-                <textarea id="passwordInputArea" name="password" scroll="none" placeholder="Password"></textarea>
-            </div>
-        </div>
-        <div id="signUpBox" class="button">
-            <div id="signUpButtonText">Sign Up</div>
+    
+        <div class="menu-items">
+          <i class="fa fa-list-alt menu-single-item" aria-hidden="true"></i>
+          <a href="#">Projects</a>
         </div>
         
-        <div id="signInBox" class="button">
-            <div id="signInButtonText">Sign In</div>
+        <div class="menu-items">
+          <i class="fa fa-music menu-single-item" aria-hidden="true"></i>
+          <a href="#">Music</a>
         </div>
-        <div id="divisor">- OR -</div>
-        <div id="signInWithGoogleBox" class="button">
-            <img id="googleIcon" src="../images/googleIcon.svg">
-            <div id="signInWithGoogleButtonText">Sign in with Google</div>
+    
+        <div class="menu-items">
+          <i class="fa fa-book menu-single-item" aria-hidden="true"></i>
+          <a href="#">Books</a>
         </div>
-        <div id="demoBox" class="button" onclick="loadDemo()">
-            <div id="demoText">Demo</div>
-            <div id="versionText">Version</div>
+    
+    
+        <div class="menu-items">
+          <i class="fa fa-film menu-single-item" aria-hidden="true"></i>
+          <a href="#">Movies</a>
         </div>
     </div>
+    
+    <div id="mainContainer"></div>
+    <script type="module" src="../router/router.js"></script>
 </body>
+
+</html>
