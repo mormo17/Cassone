@@ -13,7 +13,6 @@
         [greeting] 1fr
         [email-password] 100px
         [buttons] 1fr
-        /* [error-text] 1fr */
         [google] 1fr
         [sign-up] 1fr
         [demo] 1fr;
@@ -112,6 +111,12 @@
 
 #error_message{
     grid-row: 5/7;
+    grid-column: 1/5;
+    margin: auto;
+}
+
+#register-btn{
+    grid-row: google;
     grid-column: 1/5;
     margin: auto;
     letter-spacing: 2px;
