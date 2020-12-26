@@ -100,31 +100,31 @@ export default class HomePage {
         callback(content);
     
         for (let i = 0; i < tasks.length; i++) {
-            let id = i+ '-show'
+            let id = i + '-show'
             document.getElementById(id).addEventListener('click', () => {
                 this.showPriorities(id);
             });
         }
         for (let i = 0; i < tasks.length; i++) {
-            let id = i+ '-blue'
+            let id = i + '-blue'
             document.getElementById(id).addEventListener('click', () => {
                 this.blue(id);
             });
         }
         for (let i = 0; i < tasks.length; i++) {
-            let id = i+ '-orange'
+            let id = i + '-orange'
             document.getElementById(id).addEventListener('click', () => {
                 this.orange(id);
             });
         }
         for (let i = 0; i < tasks.length; i++) {
-            let id = i+ '-red'
+            let id = i + '-red'
             document.getElementById(id).addEventListener('click', () => {
                 this.red(id);
             });
         }
         for (let i = 0; i < tasks.length; i++) {
-            let id = i+ '-delete'
+            let id = i + '-delete'
             document.getElementById(id).addEventListener('click', () => {
                 this.delete(id);
                 tasks.splice(i, 1);
@@ -137,6 +137,10 @@ export default class HomePage {
 
         const addTask = document.getElementById('addTask');
         addTask.addEventListener('click', () => this.addTask());
+
+        const diary = document.getElementById('diary');
+        diary.addEventListener('click', () => this.loadDiary());
+
     }
 
     static showPriorities(x) {
@@ -185,5 +189,9 @@ export default class HomePage {
             document.getElementById('datePicker').value = '';
             this.render(myCallBack)
         }
+    }
+
+    static loadDiary(){
+        console.log("Diary");
     }
 }

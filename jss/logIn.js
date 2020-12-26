@@ -33,12 +33,11 @@ export default class LogInPage {
                 <div id="signInButtonText">Sign In</div>
             </div>
             <div id="divisor">- OR -</div>
-            <div id="demoBox" class="button" onclick="loadDemo()">
-            <div id="demoText">Demo</div>
-            <div id="versionText">Version</div>
-        </div>
+            <div id="demoBox" class="button"">
+                <div id="demoText">Demo</div>
+                <div id="versionText">Version</div>
+            </div>
             <div id="error_message" style="color: red"> </div>
-
 
             <div id="signInWithGoogleBox" class="button" style="cursor: pointer">
                 <img id="googleIcon" src="../images/googleIcon.svg">
@@ -53,6 +52,9 @@ export default class LogInPage {
 
         const register = document.getElementById('signUpBox');
         register.addEventListener('click', () => this.register());
+
+        const demo = document.getElementById('demoBox');
+        demo.addEventListener('click', () => this.demo());
     }
 
     static getValue(query) {
@@ -104,5 +106,9 @@ export default class LogInPage {
 
     static register() {
         window.location = "#/registration"		
+    }
+
+    static demo(){
+        window.location = "#/homePage"
     }
 }

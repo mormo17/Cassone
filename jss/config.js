@@ -1,7 +1,7 @@
 let myCallBack = {}
-let tasks = [{name: "qwerqwerqwe", date: "qwerqwerqwer"}, 
-            {name: "dima", date: "3333333333333333333"},
-            {name: "dafe", date: "ewqqqww"}]
+let tasks = [{name: "First Task", date: "2021-03-09"}, 
+            {name: "Web Final Project", date: "2021-02-14"},
+            {name: "ML Final Project", date: "2021-02-20"}]
 
         
 localStorage.setItem('tasks', JSON.stringify(tasks))
