@@ -120,6 +120,13 @@
     grid-column: 1/5;
     margin: auto;
     letter-spacing: 2px;
+    width: 20%;
+    height: 45%;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(42, 36, 95);
+    border: none;
+    cursor: pointer;
 }
 
 #signInWithGoogleBox {

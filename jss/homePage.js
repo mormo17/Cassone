@@ -193,5 +193,6 @@ export default class HomePage {
 
     static loadDiary(){
         console.log("Diary");
+        window.location = "#/diaryIndex"
     }
 }

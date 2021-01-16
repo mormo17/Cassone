@@ -1,6 +1,8 @@
 import LogInPage from '../jss/logIn.js';;
 import RegistrationPage from '../jss/registration.js';
 import HomePage from '../jss/homePage.js';
+import DiaryIndex from '../jss/diaryIndex.js'
+import Diary from '../jss/diary.js'
 
 let routes = {
     '*': () => {
@@ -14,6 +16,12 @@ let routes = {
     },
     '/homePage': () => {
         HomePage.render(updateMainContainer);
+    },
+    '/diaryIndex': () => {
+        DiaryIndex.render(updateMainContainer);
+    },
+    '/diary': () => {
+        Diary.render(updateMainContainer);
     },
 };
 
