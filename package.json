@@ -1,0 +1,22 @@
+{
+  "name": "cassone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mormo17/Cassone.git"
+  },
+  "author": "Mariam Ormotsadze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mormo17/Cassone/issues"
+  },
+  "homepage": "https://github.com/mormo17/Cassone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

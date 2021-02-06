@@ -80,7 +80,7 @@ export default class LogInPage {
         }
         if (dbPwd === pwd) {
             localStorage.setItem('status', 'loggedin')
-            window.location = "#/homePage"		
+            window.location = "#/homePage"
             return;	
         } else {
             errorElem.innerText= "Incorrect Password"

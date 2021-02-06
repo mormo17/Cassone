@@ -140,7 +140,6 @@ export default class HomePage {
 
         const diary = document.getElementById('diary');
         diary.addEventListener('click', () => this.loadDiary());
-
     }
 
     static showPriorities(x) {
