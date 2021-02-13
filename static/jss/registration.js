@@ -8,25 +8,25 @@ export default class RegistrationPage {
         }
 
         let content = `
-        <link rel="stylesheet" href="../styles/initialPage.css">
+        <link rel="stylesheet" href="/static/styles/initialPage.css">
         <div id='signInForm'>
             <div id='cassone'>
-                <img id="cassone" src="../images/cassone.png">
+                <img id="cassone" src="/static/images/cassone.png">
             </div>
             <div id="greeting">
                 <div id="greetingText">Register To Open Your Cassone!</div>
             </div>
             <div id='emailPasswordContainer'>
                 <div id='emailBox'>
-                    <img id="emailIcon" src="../images/envelope.svg">
+                    <img id="emailIcon" src="/static/images/envelope.svg">
                     <input type="text" id="emailInputArea" name="email" scroll="none" placeholder="User Name"></input>
                 </div>
                 <div id='passwordBox'>
-                    <img id="passwordIcon" src="../images/lock.svg">
+                    <img id="passwordIcon" src="/static/images/lock.svg">
                     <input type="password" id="passwordInputArea" name="password" scroll="none" placeholder="Enter Password"></input>
                 </div>
                 <div id='passwordBox'>
-                    <img id="passwordIcon" src="../images/lock.svg">
+                    <img id="passwordIcon" src="/static/images/lock.svg">
                     <input type="password" id="repeat_password" name="repeat_password" scroll="none" placeholder="Repeat Password"></input>
                 </div>
             </div>

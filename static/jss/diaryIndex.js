@@ -2,7 +2,7 @@ export default class DiaryIndex {
     static render(callback) {
         // console.log('Render Diary Index');
         let content = `
-        <link rel="stylesheet" href="../styles/diaryIndex.css"/>
+        <link rel="stylesheet" href="/static/styles/diaryIndex.css"/>
             <ul>
             <li id="yellow-note" style="cursor: pointer">
                 <a>

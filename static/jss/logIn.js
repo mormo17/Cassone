@@ -2,26 +2,26 @@ export default class LogInPage {
     static render(callback) {
         let location = window.location.href;
         let tmp = location.split('.').reverse()
-        if ((tmp[0] === 'html') || location.includes('login')) {
+        if ((tmp[0] === 'html') || location.includes('login') || window.location.pathname === '/') {
             document.getElementById('header').style.display = 'none';
             document.getElementById('leftNavigation').style.display = 'none';
         }
         let content = `
-        <link rel="stylesheet" href="../styles/initialPage.css">
+        <link rel="stylesheet" href="/static/styles/initialPage.css">
         <div id='signInForm'>
             <div id='cassone'>
-                <img id="cassone" src="../images/cassone.png">
+                <img id="cassone" src="/static/images/cassone.png">
             </div>
             <div id="greeting">
                 <div id="greetingText">Open Your Cassone!</div>
             </div>
             <div id='emailPasswordContainer'>
                 <div id='emailBox'>
-                    <img id="emailIcon" src="../images/envelope.svg">
+                    <img id="emailIcon" src="/static/images/envelope.svg">
                     <input type="text" id="emailInputArea" name="email" scroll="none" placeholder="User Name"></input>
                 </div>
                 <div id='passwordBox'>
-                    <img id="passwordIcon" src="../images/lock.svg">
+                    <img id="passwordIcon" src="/static/images/lock.svg">
                     <input type="password" id="passwordInputArea" name="password" scroll="none" placeholder="Password"></input>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default class LogInPage {
             <div id="error_message" style="color: red"> </div>
 
             <div id="signInWithGoogleBox" class="button" style="cursor: pointer">
-                <img id="googleIcon" src="../images/googleIcon.svg">
+                <img id="googleIcon" src="/static/images/googleIcon.svg">
                 <div id="signInWithGoogleButtonText">Sign in with Google</div>
             </div>
         </div>

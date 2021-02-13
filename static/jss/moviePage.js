@@ -9,15 +9,15 @@ export default class MoviePage {
         let tasks = JSON.parse(localStorage.getItem('tasks'))
 
         let content = `
-        <link rel="stylesheet" href="../styles/moviePage.css" />
+        <link rel="stylesheet" href="/static/styles/moviePage.css" />
             <div class="row">
                 <div class="column" style="background-color:#8FBC8F;">
                     <h2>Watch List</h2>
-                    <p>${toWatch[0].name}Some text..</p>
+                    <p>${toWatch[0].name}Some text/static</p>
                 </div>
                 <div class="column" style="background-color:#008080;">
                     <h2>Watched</h2>
-                    <p>Some text..</p>
+                    <p>Some text/static</p>
                 </div>
             </div>
         `;

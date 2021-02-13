@@ -9,8 +9,8 @@ export default class HomePage {
         let tasks = JSON.parse(localStorage.getItem('tasks'))
 
         let content = `
-        <link rel="stylesheet" href="../styles/homePage.css" />
-        <link rel="stylesheet" href="../styles/newTaskModal.css" />
+        <link rel="stylesheet" href="/static/styles/homePage.css" />
+        <link rel="stylesheet" href="/static/styles/newTaskModal.css" />
 
         <div id='todoes' class='todoes'>
             <div id='titleBox' class="titleBox">

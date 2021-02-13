@@ -1,7 +1,7 @@
 export default class diary{
     static render(callback) {
         let content = `
-        <link rel="stylesheet" href="../styles/diary.css" />
+        <link rel="stylesheet" href="/static/styles/diary.css" />
             <div class="paper">
             <div class="lines">
                 <div class="text" contenteditable spellcheck="false">
