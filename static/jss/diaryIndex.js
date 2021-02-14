@@ -38,6 +38,15 @@ export default class DiaryIndex {
 
         const today = document.getElementById('today');
         today.addEventListener('click', () => this.returnHomePage());
+
+        const musicPage = document.getElementById('music');
+        musicPage.addEventListener('click', () => this.demoPage());
+
+        const booksPage = document.getElementById('books');
+        booksPage.addEventListener('click', () => this.demoPage());
+
+        const moviesPage = document.getElementById('movies');
+        moviesPage.addEventListener('click', () => this.demoPage());
     }
 
     static loadDiary(color, index){
@@ -53,5 +62,8 @@ export default class DiaryIndex {
         document.body.style.background = 'white';
         window.location = "#/homePage"
     }
-
+    
+    // static demoPage(){
+    //     window.location = "#/demoPage"
+    // }
 }

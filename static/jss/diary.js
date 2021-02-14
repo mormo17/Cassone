@@ -26,6 +26,15 @@ export default class diary{
 
         const today = document.getElementById('today');
         today.addEventListener('click', () => this.returnHomePage());
+        
+        const musicPage = document.getElementById('music');
+        musicPage.addEventListener('click', () => this.demoPage());
+
+        const booksPage = document.getElementById('books');
+        booksPage.addEventListener('click', () => this.demoPage());
+
+        const moviesPage = document.getElementById('movies');
+        moviesPage.addEventListener('click', () => this.demoPage());
     }
 
     static returnHomePage(){
@@ -33,4 +42,7 @@ export default class diary{
         window.location = "#/homePage"
     }
 
+    // static demoPage(){
+    //     window.location = "#/demoPage"
+    // }
 }

@@ -4,6 +4,7 @@ import HomePage from '../jss/homePage.js';
 import DiaryIndex from '../jss/diaryIndex.js'
 import Diary from '../jss/diary.js'
 import MoviePage from '../jss/moviePage.js'
+import DemoPage from '../jss/demoPage.js'
 
 let routes = {
     '*': () => {
@@ -26,6 +27,9 @@ let routes = {
     },
     '/moviePage': () => {
         MoviePage.render(updateMainContainer);
+    },
+    '/demoPage': () => {
+        DemoPage.render(updateMainContainer);
     },
 };
 

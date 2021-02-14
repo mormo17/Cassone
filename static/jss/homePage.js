@@ -140,6 +140,15 @@ export default class HomePage {
 
         const diary = document.getElementById('diary');
         diary.addEventListener('click', () => this.loadDiary());
+
+        const musicPage = document.getElementById('music');
+        musicPage.addEventListener('click', () => this.demoPage());
+
+        const booksPage = document.getElementById('books');
+        booksPage.addEventListener('click', () => this.demoPage());
+
+        const moviesPage = document.getElementById('movies');
+        moviesPage.addEventListener('click', () => this.demoPage());
     }
 
     static showPriorities(x) {
@@ -193,5 +202,9 @@ export default class HomePage {
     static loadDiary(){
         console.log("Diary");
         window.location = "#/diaryIndex"
+    }
+
+    static demoPage(){
+        window.location = "#/demoPage"
     }
 }
